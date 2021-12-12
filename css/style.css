@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    color: inherit
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.brand:hover {
+    background-color: inherit;
+}
+
+.menuActive {
+    background-color: #029cdc;
+    color: white;
+}
+
+li {
+    text-decoration: none !important;
+}
+
+body {
+    background: #029cdc;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 2em;
+    position: relative;
+}
+
+.menu-sm {
+    display: none;
+    font-size: 1.3em;
+}
+
+.menu-md li {
+    list-style: none;
+
+}
+
+main {
+    display: grid;
+}
+
+.bienvenida {
+    grid-column: 1;
+    margin: 0 .2rem;
+}
+
+.texto1 {
+    margin-bottom: .5rem;
+}
+
+.texto2 {
+    margin-top: .6rem;
+}
+
+.anecdotas {
+    margin: .5em;
+    text-align: center;
+}
+
+.anecdotas li {
+    margin: .4em;
+    font-size: 1.5rem;
+}
+
+
+
+.card {
+    background-color: rgba(189, 183, 183, 0.5);
+    border: solid 2px rgb(90, 90, 214);
+    border-radius: 10px;
+    margin: .4em;
+    text-align: center;
+}
+
+.fecha {
+    font-weight: bold;
+}
+
+.screens {
+    margin-top: 1em;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+}
+
+.tercero {
+    margin-top: 1em;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.carousel-item video {
+    margin: auto;
+    width: 100%;
+}
+
+.carousel-item audio {
+    margin: auto;
+}
+
+
+.footer {
+    display: grid;
+    margin: .5rem .2rem;
+    color: white;
+}
+
+h1,
+h5 {
+    font-family: 'Permanent Marker',
+        cursive;
+    color: white;
+}
+
+h2,
+h3,
+h4,
+p,
+li {
+    font-family: 'Roboto',
+        sans-serif;
+    color: white;
+}
+
+.doit {
+    display: flex;
+    justify-items: center;
+    margin: .4rem auto;
+    max-width: 80%;
+}
+
+
+.anecdota {
+    margin: .4rem;
+}
+
+.titulo {
+    padding-bottom: .3rem;
+}
+
+.razones {
+    font-size: 1.2rem;
+    margin: .4em;
+    text-align: center;
+}
+
+.razones li {
+    margin: .3em;
+}
+
+.footer {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .4em;
+    color: white;
+    text-align: center;
+}
+
+
+@media only screen and (max-width: 450px) {
+    .menu-sm {
+        display: block;
+    }
+
+    .menu-md {
+        display: none;
+    }
+
+    input[type=checkbox]:checked~.menu-md {
+        color: white;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        display: flex;
+        flex-flow: column;
+        align-items: flex-end;
+        gap: 1.5em;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 2em;
+        border-bottom-left-radius: 0.5em;
+        animation: scale-in-ver-top 300ms both;
+        z-index: 100;
+    }
+
+    @keyframes scale-in-ver-top {
+        0% {
+            transform: scaleY(0);
+            transform-origin: top;
+            opacity: 0;
+        }
+
+        100% {
+            transform: scaleY(1);
+            transform-origin: top;
+            opacity: 1;
+        }
+
+    }
+
+}
+
+@media only screen and (min-width: 500px) {
+    header {
+        display: grid;
+        justify-content: center;
+    }
+
+    .brand {
+        grid-column: 1;
+        grid-row: 1;
+        text-align: center;
+        font-size: 2rem;
+
+    }
+
+    .menu-md {
+        display: flex;
+        gap: 1em;
+        width: 100%;
+        margin-top: .5rem;
+        color: white;
+        font-size: 1.3rem;
+        border-top: solid 1px white;
+        border-bottom: 1px solid white;
+    }
+
+    .footer-md {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 60%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .4em;
+        color: white;
+    }
+
+}
+
+@media only screen and (min-width: 768px) {
+    .razones-md li {
+        margin: .4rem;
+    }
+
+    .footer-md {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 80%;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: .4em;
+        color: white;
+    }
+
+    .col-md-4 {
+        max-height: 30%;
+    }
+
+    .quinta {
+        margin-bottom: 6rem;
+    }
+
+    .carousel-item video {
+        max-width: 25%;
+    }
+
+    .card-group {
+        margin: 0 auto;
+        max-width: 76%;
+    }
+
+    .doit-md {
+        display: flex;
+        justify-items: center;
+        margin: .4rem auto;
+        max-width: 40%;
+    }
+}
